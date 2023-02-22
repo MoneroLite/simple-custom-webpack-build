@@ -59,7 +59,16 @@ module.exports = {
     ],
     devServer: {
         port: 3001,
-        hot: true
+        hot: true,
+        client: {
+            // Показывает ошибки при компиляции в самом браузере
+            overlay: {
+              errors: true,
+              warnings: false,
+            },
+            // Показывает прогесс компиляции
+            progress: true
+          },
     },
     mode: production ? 'production' : 'development'
 }
